@@ -49,3 +49,7 @@ gem 'binding_of_caller'
 gem 'devise'
 
 gem 'simple_form'
+
+gem 'carrierwave'
+
+gem "mini_magick"

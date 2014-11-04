@@ -1,2 +1,25 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  background-color: #121211;;
+  color: #ddddd1;
+  }
+
+a {color: #ddddd1;}
+
+a:hover {color: white}
+
+.upload {
+  color: white;
+  width: 8em;
+  height: 2em;
+  padding: 0.3em;
+  padding-left: 0.8em;
+  background-color: #121211;
+  }
+
+.upload:hover {
+  background-color: #4E76C9;
+  a {text-decoration: none;}
+  }
