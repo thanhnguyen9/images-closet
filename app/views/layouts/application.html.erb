@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ImageCloset</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<div class= "container">
+  <%= link_to "Home", root_path %>
+  <% if user_signed_in? %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    <%= link_to "Images", images_path %>
+  <%end%>
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+  <%= yield %>
+</div>
+</body>
+</html>
