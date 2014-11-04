@@ -11,14 +11,16 @@
 
   <tbody>
     <% @images.each do |image| %>
-      <tr>
-        <td><%= image.title %></td>
-        <td><%= image.photo %></td>
-        <td><%= link_to 'Show', image %></td>
-        <td><%= link_to 'Edit', edit_image_path(image) %></td>
-        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+      <% if image.user_id == current_user.id %>
+        <tr>
+          <td><%= image.title %></td>
+          <td><%= image.photo %></td>
+          <td><%= link_to 'Show', image %></td>
+          <td><%= link_to 'Edit', edit_image_path(image) %></td>
+          <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    <%end%>
   </tbody>
 </table>
 
