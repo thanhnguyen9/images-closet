@@ -11,4 +11,5 @@
 </p>
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Destroy', image_path(@image), method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', images_path %>
