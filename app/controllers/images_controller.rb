@@ -7,6 +7,7 @@ class ImagesController < ApplicationController
   # GET /images.json
   def index
     @images = Image.all
+    @total = 0
   end
 
   # GET /images/1
