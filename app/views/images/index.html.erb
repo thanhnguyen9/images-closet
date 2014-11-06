@@ -1,4 +1,4 @@
-<h1>Listing images</h1>
+
 
 <div class="row">
   <div class="col-md-8">
@@ -8,7 +8,7 @@
       <div class="image-box">
         <div class="image-box-inside">
             <% @images.each do |image| %>
-              <% if image.user_id == current_user.id %>
+
 
 
 
@@ -17,15 +17,13 @@
                       <%= image_tag image.photo.url(:thumb) %>
                     <%end%>
 
-              <% end %>
+
             <%end%>
           </div>
       </div>
   </div>
 
-
-  <div class="col-md-3">What</div>
-
+ <%= render partial: "side" %>
 </div>
 <br>
 

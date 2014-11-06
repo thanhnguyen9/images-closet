@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ImageCloset</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>ImagesCloset</title>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "application" %>
   <%= csrf_meta_tags %>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".btn").click(function(){
+        $("#myModal").modal('show');
+    });
+});
+</script>
+
+
+
 </head>
 <body>
-
-
-<nav class="navbar navbar-inverse" role="navigation">
   <div class="container">
-  <%= link_to "Home", root_path %>
-  <% if user_signed_in? %>
-    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-    <%= link_to "Images", images_path %>
-  <%end%>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
 
-     <%= notice %>
-       <%= alert %>
-  </div>
+      <span><strong><%= link_to "ImagesCloset", root_path %></strong></span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <% if user_signed_in? %>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "Images", images_path %></li>
+        <%end%>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right upload">
+        <li><%= link_to 'Upload Image', new_image_path %></li>
+        <li class="dropdown">
+
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
-<div class= "container">
+
+
   <%= yield %>
 </div>
 </body>
