@@ -2,7 +2,7 @@
 @import "bootstrap";
 
 body {
-  background-color: #121211;;
+  background-color: #1B191B;
   color: #ddddd1;
   }
 
@@ -75,3 +75,24 @@ a:hover {color: white}
   width: 20%;
   margin: 1em;
   }
+
+
+
+
+
+
+
+
+
+// Modal Stuffs
+
+  input, button, select, textarea {
+font-family: inherit;
+font-size: inherit;
+line-height: inherit;
+background-color: black;
+width: 7.9em;
+padding: 0
+ }
+
+.modal-body{p {color: black}}
