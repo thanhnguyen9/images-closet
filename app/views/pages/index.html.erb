@@ -9,12 +9,12 @@
 
             <% @images.each do |image| %>
             <!-- Button trigger modal -->
-              <%= link_to "#", data: {toggle: "modal", target: "##{image.id}"} do %>
+              <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{image.id}"} do %>
                 <%= image_tag image.photo.url(:thumb) %>
               <%end%>
 
             <!-- Modal -->
-                <div class="modal fade" id="#{image.id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal fade" id="photo-modal<%=image.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -22,7 +22,7 @@
                         <h4 class="modal-title" id="myModalLabel"><%= image.title %></h4>
                       </div>
                       <div class="modal-body">
-                          <%= image.photo %>
+                          <%= image_tag image.photo.url(:large) %>
                         <p><%= image.content %></p>
                       </div>
                        <div class="modal-footer">
