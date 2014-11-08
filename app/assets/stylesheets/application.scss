@@ -21,7 +21,25 @@ body {
 
 #form{display: none}
 
+//Upload button
 
+.btn-primary.upload{
+  margin-left: 46.5em;
+  margin-top: 0.5em;
+  border-color: #f8f8f8;
+  color: white;
+  background-color: black;
+}
+.btn-primary.upload:hover {
+  color: white;
+  background-color: black;
+  }
+
+//sign in and image button
+.btn-primary.nav{border-color: #f8f8f8;
+color: white;
+background-color: #f8f8f8;}
+.btn-primary.nav:hover{background-color: black;}
 
 
 

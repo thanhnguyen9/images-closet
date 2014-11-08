@@ -7,77 +7,36 @@
       <div class="image-box">
         <div class="image-box-inside">
 
-
+            <% @images.each do |image| %>
             <!-- Button trigger modal -->
-
-              <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/05/pulitzer_94_500.jpg", data: {toggle: "modal", target: "#myModal"}>
-          
+              <%= link_to "#", data: {toggle: "modal", target: "##{image.id}"} do %>
+                <%= image_tag image.photo.url(:thumb) %>
+              <%end%>
 
             <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Pic title</h4>
+                <div class="modal fade" id="#{image.id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel"><%= image.title %></h4>
+                      </div>
+                      <div class="modal-body">
+                          <%= image.photo %>
+                        <p><%= image.content %></p>
+                      </div>
+                       <div class="modal-footer">
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                       </div>
+                    </div>
                   </div>
-                  <div class="modal-body">
-                    <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/05/pulitzer_94_500.jpg">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis eu nisi sed dictum. Donec non vestibulum mi. Sed sit amet orci velit. Phasellus ac mi et urna volutpat vestibulum eu vitae felis. Nulla facilisis leo non turpis tempus luctus. Aenean viverra velit id diam dignissim, id suscipit urna congue. Duis bibendum, augue id sodales elementum, dolor justo sagittis ante, efficitur s</p>
-                  </div>
-                   <div class="modal-footer">
-                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                   </div>
                 </div>
-              </div>
-            </div>
-
-
-
-
-
-
-
-
-            <img src="http://www.worldsfamousphotos.com/wp-content/uploads/2007/09/afghan-woman.jpg">
-            <img src="http://www.worldsfamousphotos.com/wp-content/uploads/2007/11/aqsa.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/04/tourist_guy_e-mail_hoax_september_11th_2001_new_york_city.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/03/lockness_monster.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/04/budist_monk_on_fire.jpg">
-            <img src="http://www.worldsfamousphotos.com/wp-content/uploads/2007/07/410px-einsatzgruppen_killing.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/03/tiananmen_square.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/06/woman_and_girl_falling.JPG">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/03/1930-lynching.jpg">
-            <img src="http://www.worldsfamousphotos.com/wp-content/uploads/2008/01/lunch.jpg">
-            <img src="http://www.worldsfamousphotos.com/wp-content/uploads/2007/10/oklahoma-city-bombing.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/04/spot_news_-1.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/04/reichstag_flag.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/03/nagasaki-1945.jpg">
-            <img src="http://www.worldsfamousphotos.com/wp-content/uploads/2007/06/assassination.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/05/omayra_sanchez.jpg">
-            <img src="http://www.worldsfamousphotos.com/wp-content/uploads/2007/09/segregated.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/04/che_dead.jpg">
-            <img src="http://www.worldsfamousphotos.com/wp-content/uploads/2007/09/oka_stare_down.jpg">
-            <img src="http://www.worldsfamousphotos.com/wp-content/uploads/2008/02/iraqi_prisoner_and_son.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/04/tupac4.jpg">
-            <img src="http://www.worldsfamousphotos.com/wp-content/uploads/2007/11/niagrafalls.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/03/albert-einstein-1951.jpg">
-            <img src="http://worldsfamousphotos.com/wp-content/uploads/2007/03/hitler.jpg">
-            <img src="http://i1.wp.com/listverse.com/wp-content/uploads/2014/03/0114.jpg?zoom=2&resize=632%2C415">
-            <img src="http://i1.wp.com/listverse.com/wp-content/uploads/2014/03/0312.jpg?zoom=2&resize=632%2C415">
-            <img src="http://i1.wp.com/listverse.com/wp-content/uploads/2014/03/0413.jpg?zoom=2&resize=632%2C415">
-            <img src="http://i1.wp.com/listverse.com/wp-content/uploads/2014/03/098.jpg?zoom=2&resize=632%2C415">
-            <img src="http://i0.wp.com/listverse.com/wp-content/uploads/2014/03/1011.jpg?zoom=2&resize=632%2C415">
-          </div>
-
-
-
-
-
-      </div>
+            <%end%>
+        </div>
+    </div>
   </div>
-<div class="col-md-4">
-  <div class="image-box">
+  <div class="col-md-4">
+    <div class="image-box">
     <div class="image-box-inside">
       <h3>Welcome</h3>
         <p>
@@ -85,6 +44,6 @@
         </p>
     </div>
   </div>
-</div>
+
 
 </div>
