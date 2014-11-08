@@ -8,6 +8,7 @@ class ImagesController < ApplicationController
   def index
     @images = Image.all
     @total = 0
+    @image = Image.new
   end
 
   # GET /images/1

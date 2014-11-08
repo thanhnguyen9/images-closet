@@ -1,4 +1,20 @@
 
+<%= link_to 'Upload Image', "#", class:"btn btn-primary btn-lg", data: {toggle: "modal", target: "#upload-image"} %>
+<!-- Modal -->
+<div class="modal fade" id="upload-image" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Photo</h4>
+      </div>
+      <div class="modal-body">
+        <%= render partial: "form" %>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <div class="row">
   <div class="col-md-8">
@@ -24,10 +40,4 @@
   </div>
 
  <%= render partial: "side" %>
-</div>
-<br>
-
-<div class="upload">
-  <%= link_to 'Upload Image', new_image_path %>
-
 </div>
