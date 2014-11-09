@@ -6,6 +6,7 @@ body {
   color: #ddddd1;
   }
 
+.navbar-default {height: 2em}
 .navbar-header {
   a {
     color: black;
@@ -19,16 +20,25 @@ body {
     }
 }
 
+//sign in nav
+.btn-primary.nav-sign-in {
+  margin-left: 52em;
+  margin-top: -3.8em;
+  background: #1B191B;
+  border: black
+
+  }
+
 #form{display: none}
 
 //Upload button
 
 .btn-primary.upload{
-  margin-left: 46.5em;
-  margin-top: 0.5em;
+  margin-left: 57.5em;
+margin-top: -6.7em;
   border-color: #f8f8f8;
   color: white;
-  background-color: black;
+  background-color: #1B191B;
 }
 .btn-primary.upload:hover {
   color: white;
@@ -36,9 +46,12 @@ body {
   }
 
 //sign in and image button
-.btn-primary.nav{border-color: #f8f8f8;
-color: white;
-background-color: #f8f8f8;}
+.btn-primary.nav{
+  border-color: #f8f8f8;
+  color: white;
+  background-color: #f8f8f8;
+  height: 2em;
+  }
 .btn-primary.nav:hover{background-color: black;}
 
 
@@ -50,7 +63,7 @@ a {color: #ddddd1;}
 
 a:hover {color: white}
 
-.upload {
+.upload-index-image {
   color: black;
   width: 10em;
   padding-left: 0.8em;
@@ -58,7 +71,7 @@ a:hover {color: white}
   a{color: black}
   }
 
-.upload:hover {
+.upload-index-image:hover {
   a {text-decoration: none;}
     cursor: pointer;
   }
@@ -98,10 +111,6 @@ a:hover {color: white}
 
 
 
-
-
-
-
 // Modal Stuffs
 
   input, button, select, textarea {
@@ -114,3 +123,8 @@ padding: 0
  }
 
 .modal-body{p {color: black}}
+
+.modal-title {
+  color: black;
+  font-size: 30px;
+  }

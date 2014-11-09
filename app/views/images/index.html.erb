@@ -1,5 +1,5 @@
 
-<%= link_to 'Upload Image', "#", class:"btn btn-primary btn-lg", data: {toggle: "modal", target: "#upload-image"} %>
+<%= link_to 'Upload Image', "#", class:"btn btn-primary upload-index-image", data: {toggle: "modal", target: "#upload-image"} %>
 <!-- Modal -->
 <div class="modal fade" id="upload-image" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -23,20 +23,34 @@
 
       <div class="image-box">
         <div class="image-box-inside">
+
             <% @images.each do |image| %>
+            <!-- Button trigger modal -->
+              <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{image.id}"} do %>
+                <%= image_tag image.photo.url(:thumb) %>
+              <%end%>
 
-
-
-
-
-                    <%= link_to image do %>
-                      <%= image_tag image.photo.url(:thumb) %>
-                    <%end%>
-
-
+            <!-- Modal -->
+                <div class="modal fade" id="photo-modal<%=image.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel"><%= image.title %></h4>
+                      </div>
+                      <div class="modal-body">
+                          <%= image_tag image.photo.url(:large) %>
+                        <p><%= image.content %></p>
+                      </div>
+                       <div class="modal-footer">
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                       </div>
+                    </div>
+                  </div>
+                </div>
             <%end%>
           </div>
-      </div>
+    </div>
   </div>
 
  <%= render partial: "side" %>
