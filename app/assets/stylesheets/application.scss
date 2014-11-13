@@ -1,60 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "nav";
 
 body {
   background-color: #1B191B;
   color: #ddddd1;
   }
-
-.navbar-default {height: 2em}
-.navbar-header {
-  a {
-    color: black;
-    padding-top: 1em;
-    font-family: 'Lobster', cursive;
-    font-size: 2em;
-  }
-  a:hover {
-    color: rgb(86, 64, 64);
-    text-decoration: none;
-    }
-}
-
-//sign in nav
-.btn-primary.nav-sign-in {
-  margin-left: 52em;
-  margin-top: -3.8em;
-  background: #1B191B;
-  border: black
-
-  }
-
-#form{display: none}
-
-//Upload button
-
-.btn-primary.upload{
-  margin-left: 57.5em;
-margin-top: -6.7em;
-  border-color: #f8f8f8;
-  color: white;
-  background-color: #1B191B;
-}
-.btn-primary.upload:hover {
-  color: white;
-  background-color: black;
-  }
-
-//sign in and image button
-.btn-primary.nav{
-  border-color: #f8f8f8;
-  color: white;
-  background-color: #f8f8f8;
-  height: 2em;
-  }
-.btn-primary.nav:hover{background-color: black;}
-
-
 
 
 .container {width: 1000px}
