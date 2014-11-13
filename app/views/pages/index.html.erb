@@ -10,7 +10,7 @@
             <% @images.each do |image| %>
             <!-- Button trigger modal -->
               <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{image.id}"} do %>
-                <%= image_tag image.photo.url(:thumb) %>
+                <%= image_tag image.photo.url(:thumb), id: "image-in-homepage" %>
               <%end%>
 
             <!-- Modal -->
@@ -22,7 +22,8 @@
                         <h4 class="modal-title" id="myModalLabel"><%= image.title %></h4>
                       </div>
                       <div class="modal-body">
-                          <%= image_tag image.photo.url(:large) %>
+                          <%= image_tag image.photo.url(:large), id: "image-in-modal" %>
+                          <hr>
                         <p><%= image.content %></p>
                       </div>
                        <div class="modal-footer">

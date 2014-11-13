@@ -1,5 +1,5 @@
 
-<%= link_to 'Upload Image', "#", class:"btn btn-primary upload-index-image", data: {toggle: "modal", target: "#upload-image"} %>
+<%= link_to 'Upload Image', "#", class:"btn btn-primary upload-index-image", data: {toggle: "modal", target: "#upload-image"}%>
 <!-- Modal -->
 <div class="modal fade" id="upload-image" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -27,7 +27,7 @@
             <% @images.each do |image| %>
             <!-- Button trigger modal -->
               <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{image.id}"} do %>
-                <%= image_tag image.photo.url(:thumb) %>
+                <%= image_tag image.photo.url(:thumb), id: "image-in-homepage" %>
               <%end%>
 
             <!-- Modal -->
@@ -39,12 +39,16 @@
                         <h4 class="modal-title" id="myModalLabel"><%= image.title %></h4>
                       </div>
                       <div class="modal-body">
-                          <%= image_tag image.photo.url(:large) %>
+                          <%= image_tag image.photo.url(:large), id: "image-in-modal" %>
+                          <hr>
                         <p><%= image.content %></p>
                       </div>
                        <div class="modal-footer">
+                         <%= link_to "Edit", edit_image_path(id: image.id), class:"btn btn-primary" %>
+                         <%= link_to "Delete", image_path(id: image.id), method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-primary" %>
+
                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                       </div>
+                         </div>
                     </div>
                   </div>
                 </div>
