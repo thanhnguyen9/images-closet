@@ -9,13 +9,7 @@
   <strong>Photo:</strong>
   <%= image_tag @image.photo.url(:large) %>
 </p>
-
-<%= simple_form_for @image do |f| %>
-
-  <%= f.association :user, label_method: :email, value_method: :id, include_blank: false %>
-  <%= f.submit "Tag", class: "upload" %>
-
-<%end%> <br>
+<br>
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Destroy', image_path(@image), method: :delete, data: { confirm: 'Are you sure?' } %> |

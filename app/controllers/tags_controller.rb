@@ -2,8 +2,9 @@ class TagsController < ApplicationController
 
   def index
     @tags = Tag.all
+    @favors = Favor.all
   end
-  
+
   def new
     @image = Image.find(params[:id])
     @tag = @image.tags.new

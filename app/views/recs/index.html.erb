@@ -1,0 +1,47 @@
+
+
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="image-box">
+        <div class="image-box-inside">
+          <h3 id="h3-in-big-box">Recommend Image</h3>
+          <% @recs.each do |rec| %>
+
+
+
+              <!-- Button trigger modal -->
+                <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{rec.image.id}"} do %>
+                  <%= image_tag rec.image.photo.url(:thumb), id: "image-in-homepage" %>
+                <%end%>
+
+              <!-- Modal -->
+                  <div class="modal fade" id="photo-modal<%=rec.image.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                          <h4 class="modal-title" id="myModalLabel"><%= rec.image.title %></h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <%= image_tag rec.image.photo.url(:large), id: "image-in-modal" %>
+
+                            <hr>
+                          <p><%= rec.image.content %></p>
+                        </div>
+                        <div class="modal-footer">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+          <%end%>
+        </div>
+      </div>
+    </div>
+<%= render partial: "images/side" %>
+</div>
