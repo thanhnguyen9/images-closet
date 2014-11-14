@@ -15,27 +15,43 @@
     }
 }
 
-//sign in nav
+//sign-in
+
+
+//sign-in
 .btn-primary.nav-sign-in {
-  margin-left: 50em;
-  margin-top: -3.8em;
+  margin-left: 54em;
+  margin-top: -3.9em;
   background: #1B191B;
   border: black
 }
 .btn-primary.nav-sign-in:hover {background: #564856;}
 
-#form{display: none}
-
-//Upload button
-
-.btn-primary.nav-upload{
-  margin-left: 57.5em;
-  margin-top: -6.7em;
+//sign-up
+.btn-primary.nav-sign-up{
+  margin-left: 60em;
+  margin-top: -6.8em;
   border-color: #f8f8f8;
   color: white;
   background-color: #1B191B;
 }
-.btn-primary.nav-upload:hover {
+.btn-primary.nav-sign-up:hover {
+  background: #564856;
+  }
+
+
+#form{display: none}
+
+//sign-out button
+
+.btn-primary.nav-sign-out{
+  margin-left: 57.5em;
+  margin-top: -6.8em;
+  border-color: #f8f8f8;
+  color: white;
+  background-color: #1B191B;
+}
+.btn-primary.nav-sign-out:hover {
   color: white;
   background: #564856
   }
@@ -50,17 +66,31 @@
 .btn-primary.nav:hover{background-color: black;}
 
 
-
-
-
-
-// sign out and Image
-
-.nav-sign-out {
-  background: black
-
+.nav-my-image {
+  margin-left: 12em;
+  margin-top: -4em;
+  background: #1B191B;
+  border: black
 }
+.btn-primary.nav-my-image:hover{background: #564856;}
 
-.nav-image {
 
+.nav-tag {
+  margin-top: -4em;
+  margin-left: 0.5em;
+  background: #1B191B;
+  border: black
 }
+.btn-primary.nav-tag:hover{background: #564856;}
+
+.nav-rec {
+  margin-top: -4em;
+  margin-left: 23em;
+  border-color: #f8f8f8;
+  color: white;
+  background-color: #1B191B;
+  }
+
+.btn-primary.nav-rec:hover {
+  background: #564856;
+  }

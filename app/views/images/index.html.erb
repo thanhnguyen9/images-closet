@@ -1,8 +1,10 @@
 
-<%= link_to 'Upload Image', "#", class:"btn btn-primary upload-index-image", data: {toggle: "modal", target: "#upload-image"}%>
+<button  class="btn btn-primary btn-lg" data-toggle="modal" data-target="#upload-image">
+  Upload Image
+</button>
+
 <br><br>
 
-<%= link_to "Tag Photo", tags_path %>
 <!-- Modal -->
 <div class="modal fade" id="upload-image" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">

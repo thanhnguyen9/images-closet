@@ -10,6 +10,7 @@ class ImagesController < ApplicationController
     @total = 0
 
     @image = current_user.images.new
+    @favors = Favor.all
   end
 
   # GET /images/1
