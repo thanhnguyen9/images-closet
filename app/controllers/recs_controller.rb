@@ -10,7 +10,6 @@ class RecsController < ApplicationController
 
            Favor.all.each do |favor|
              @recs << favor if favor.user_id != current_user.id
-
           end
     end
 end
