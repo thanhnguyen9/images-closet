@@ -1,5 +1,6 @@
 
 <%= link_to 'Upload Image', "#", class:"btn btn-primary upload-index-image", data: {toggle: "modal", target: "#upload-image"}%>
+<br><br>
 <!-- Modal -->
 <div class="modal fade" id="upload-image" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -53,7 +54,7 @@
                          <%= link_to "Edit", edit_image_path(id: image.id), class:"btn btn-primary" %>
                          <%= link_to "Delete", image_path(id: image.id), method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-primary" %>
 
-                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
                        </div>
                     </div>
                   </div>

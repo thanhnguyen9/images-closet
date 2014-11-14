@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "nav";
+@import "images";
 
 body {
   background-color: #1B191B;
@@ -26,37 +27,6 @@ a:hover {color: white}
   a {text-decoration: none;}
     cursor: pointer;
   }
-
-
-
-.image-box {
-  padding: 1.4em;
-  background-color: #E7E4E4;;
-  border-radius: 1.4em;
-  }
-
-.image-box-inside {
-  background-color: #121211;
-  h3 {text-align: center;}
-  padding: 1em;
-
-  img {
-   background: #2b2b2b;
-   padding: 0.4em;
-   margin-bottom: 3px;
-   border: 2em;
-
-  }
-
-  img#image-in-homepage {
-     width: 9.9em;
-     height: 7em;
-   }
-
-   img#image-in-modal {margin-left: 7.5em;}
-
-  img:hover {background: #EFE7E7;}
-}
 
 .col-xs-4 {border: 1em solid red}
 .col-md-2 {
@@ -91,9 +61,11 @@ padding: 0
 // tag
 
 .btn-success.tag {
-  margin-right: 13em;
+  margin-right: 20em;
   }
 
 .popover {
     color: black;
 }
+
+#h3-on-side {margin-top: -0.3em}
