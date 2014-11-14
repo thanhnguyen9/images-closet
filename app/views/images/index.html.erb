@@ -25,6 +25,9 @@
         <div class="image-box-inside">
 
             <% @images.each do |image| %>
+
+              <% if image.user.id == current_user.id %>
+
             <!-- Button trigger modal -->
               <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{image.id}"} do %>
                 <%= image_tag image.photo.url(:thumb), id: "image-in-homepage" %>
@@ -39,19 +42,24 @@
                         <h4 class="modal-title" id="myModalLabel"><%= image.title %></h4>
                       </div>
                       <div class="modal-body">
+                        <%= link_to new_tag_path(id: image.id) do %>
                           <%= image_tag image.photo.url(:large), id: "image-in-modal" %>
+                        <%end%>
                           <hr>
                         <p><%= image.content %></p>
                       </div>
                        <div class="modal-footer">
+                         <a href="#" tabindex="0" class="btn btn-lg btn-success tag" role="button" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Click the photo to tag">Tag</a>
                          <%= link_to "Edit", edit_image_path(id: image.id), class:"btn btn-primary" %>
                          <%= link_to "Delete", image_path(id: image.id), method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-primary" %>
 
                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                         </div>
+                       </div>
                     </div>
                   </div>
                 </div>
+
+              <%end%>
             <%end%>
           </div>
     </div>

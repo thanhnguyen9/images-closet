@@ -8,30 +8,34 @@
         <div class="image-box-inside">
 
             <% @images.each do |image| %>
-            <!-- Button trigger modal -->
-              <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{image.id}"} do %>
-                <%= image_tag image.photo.url(:thumb), id: "image-in-homepage" %>
-              <%end%>
 
-            <!-- Modal -->
-                <div class="modal fade" id="photo-modal<%=image.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="myModalLabel"><%= image.title %></h4>
+            <% if image.user.email == "thanh@yahoo.com" %>
+
+                <!-- Button trigger modal -->
+                  <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{image.id}"} do %>
+                    <%= image_tag image.photo.url(:thumb), id: "image-in-homepage" %>
+                  <%end%>
+
+                <!-- Modal -->
+                    <div class="modal fade" id="photo-modal<%=image.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel"><%= image.title %></h4>
+                          </div>
+                          <div class="modal-body">
+                              <%= image_tag image.photo.url(:large), id: "image-in-modal" %>
+                              <hr>
+                            <p><%= image.content %></p>
+                          </div>
+                           <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+                        </div>
                       </div>
-                      <div class="modal-body">
-                          <%= image_tag image.photo.url(:large), id: "image-in-modal" %>
-                          <hr>
-                        <p><%= image.content %></p>
-                      </div>
-                       <div class="modal-footer">
-                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                       </div>
                     </div>
-                  </div>
-                </div>
+                  <%end%> 
             <%end%>
         </div>
     </div>

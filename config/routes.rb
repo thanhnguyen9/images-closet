@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :images
+
 
   root 'pages#index'
+
+  devise_for :users
+  resources :images
+  resources :tags, only: [:new, :create]
+
 
 
 end
