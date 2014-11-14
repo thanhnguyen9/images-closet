@@ -1,0 +1,44 @@
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="image-box">
+        <div class="image-box-inside">
+          <h3 id="h3-in-big-box">Tag Image</h3>
+          <% @tags.each do |tag| %>
+            <% if tag.user.id == current_user.id %>
+
+
+              <!-- Button trigger modal -->
+                <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{tag.image.id}"} do %>
+                  <%= image_tag tag.image.photo.url(:thumb), id: "image-on-side" %>
+                <%end%>
+
+              <!-- Modal -->
+                  <div class="modal fade" id="photo-modal<%=tag.image.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                          <h4 class="modal-title" id="myModalLabel"><%= tag.image.title %></h4>
+                        </div>
+                        <div class="modal-body">
+                          <%= link_to new_favor_path(image_id: tag.image.id, user_id: current_user.id) do %>
+                            <%= image_tag tag.image.photo.url(:large), id: "image-in-modal" %>
+                          <%end%>
+                            <hr>
+                          <p><%= tag.image.content %></p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#" tabindex="0" class="btn btn-lg btn-success tag" role="button" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Click the photo to favorite">Favorite</a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            <%end%>
+          <%end%>
+        </div>
+      </div>
+    </div>
+<%= render partial: "images/side" %>
+</div>

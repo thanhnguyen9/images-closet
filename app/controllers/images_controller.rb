@@ -10,7 +10,6 @@ class ImagesController < ApplicationController
     @total = 0
 
     @image = current_user.images.new
-    @tags = Tag.all
   end
 
   # GET /images/1

@@ -1,4 +1,9 @@
 class TagsController < ApplicationController
+
+  def index
+    @tags = Tag.all
+  end
+  
   def new
     @image = Image.find(params[:id])
     @tag = @image.tags.new
@@ -12,4 +17,5 @@ class TagsController < ApplicationController
       render :new
     end
   end
+
 end

@@ -28,7 +28,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <% if user_signed_in? %>
-                <%= link_to "Images", images_path, class: "btn btn-primary nav-sign-in" %>
+                <%= link_to "My Images", images_path, class: "btn btn-primary nav-sign-in" %>
                 <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-primary nav-upload" %>
 
 

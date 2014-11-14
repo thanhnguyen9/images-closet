@@ -1,0 +1,11 @@
+<h1>Favors Image</h1>
+
+<%= image_tag @favor.image.photo.url(:large) %>
+
+<%= simple_form_for @favor do |f| %>
+  <%= f.association :image, :as => :hidden %>
+  <%= f.association :user, :as => :hidden%><br>
+
+
+  <%= f.submit "Favor", class: "btn btn-success" %>
+<%end%>
