@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   resources :favors, only: [:new, :create]
 
   get 'recs' => 'recs#index'
+
+  namespace :api do
+    get '/images' => 'images#index'
+
+  end
 end

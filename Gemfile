@@ -61,3 +61,5 @@ gem "mini_magick", "~> 4.0.0.rc"
 gem 'rails_12factor'
 
 gem 'remotipart', '~> 1.2'
+
+gem "active_model_serializers", "~> 0.8.0"
