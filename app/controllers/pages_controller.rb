@@ -1,8 +1,14 @@
 class PagesController < ApplicationController
 
   def index
-    @images = Image.all
+    @homepages = Homepage.all
   end
 
+  def cave
+    @caves = Cave.all
+  end
 
+  def place
+    @places = Place.all
+  end
 end

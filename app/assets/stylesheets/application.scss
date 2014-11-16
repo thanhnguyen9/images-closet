@@ -3,6 +3,7 @@
 @import "nav";
 @import "images";
 @import "tags";
+@import "footer";
 
 body {
   background-color: #1B191B;
@@ -86,7 +87,10 @@ label{color: black}
   background: black;
   border: black;
   }
-.row {margin-top: -1.5em}
+.row {
+  margin-top: -1.5em;
+  height: 470px
+  }
 
 #rec-page {
   background: black;
@@ -97,3 +101,9 @@ label{color: black}
   padding-top: 0.4em;
   margin-left: 8em;
 }
+
+#test-fix{height: 50px;
+background: white
+}
+
+.most-ten {text-align: center}

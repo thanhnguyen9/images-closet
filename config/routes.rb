@@ -13,4 +13,8 @@ Rails.application.routes.draw do
     get '/images' => 'images#index'
 
   end
+
+  get 'pages/caves' => 'pages#cave'
+
+  get 'pages/places' => 'pages#place'
 end

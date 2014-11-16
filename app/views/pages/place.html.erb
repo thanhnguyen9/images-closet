@@ -7,7 +7,7 @@
       <div class="image-box">
         <div class="image-box-inside">
 
-            <% @homepages.each do |image| %>
+            <% @places.each do |image| %>
 
 
 
@@ -39,20 +39,12 @@
     </div>
   </div>
   <div class="col-md-4">
-    <div class="image-box">
-      <div class="image-box-inside">
-        <h3>Welcome</h3>
-          <p>
-            These are indeed world’s most famous photos. Every single one of them has a great story behind, we’re trying to bring you the pictures that changed mankind. If the change was good or bad, that is for you to judge. Click it to see more information.
-          </p>
-      </div>
-    </div>
-    <br >
+
     <div class="image-box">
       <div class="image-box-inside most-ten">
-        <%= link_to "10 most beautiful places", pages_places_path %><br>
+        <%= link_to "10 most beautiful places", "#" %><br>
         <%= link_to "10 most beautiful islands", "#" %><br>
-        <%= link_to "10 most beautiful caves", pages_caves_path %><br>
+        <%= link_to "10 most beautiful caves", "#" %><br>
         <%= link_to "10 most beautiful moutains", "#" %><br>
       </div>
     </div>
