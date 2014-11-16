@@ -1,9 +1,10 @@
+<h3 id="h3-in-big-box">Tag Image</h3>
 
 <div class="row">
   <div class="col-md-8">
     <div class="image-box">
         <div class="image-box-inside">
-          <h3 id="h3-in-big-box">Tag Image</h3>
+
           <% @tags.each do |tag| %>
             <% if tag.user.id == current_user.id %>
 
@@ -27,9 +28,10 @@
                           <%end%>
                             <hr>
                           <p><%= tag.image.content %></p>
+                          <%= render partial: "favor" %>
                         </div>
                         <div class="modal-footer">
-                          <a href="#" tabindex="0" class="btn btn-lg btn-success tag" role="button" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Click the photo to favorite">Favorite</a>
+                          <a href="#" tabindex="0" class="btn btn-lg btn-success favorite" role="button" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Click the photo to favorite">Favorite</a>
 
                         </div>
                       </div>

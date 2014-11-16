@@ -36,7 +36,7 @@ class ImagesController < ApplicationController
 
     respond_to do |format|
       if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully created.' }
+        format.html { redirect_to images_path, notice: 'Image was successfully created.' }
         format.json { render :show, status: :created, location: @image }
       else
         format.html { render :new }
@@ -71,7 +71,7 @@ class ImagesController < ApplicationController
     end
   end
 
-  
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -25,7 +25,11 @@
      height: 7em;
    }
 
-   img#image-in-modal {margin-left: 7.5em;}
+  img#image-in-modal {
+    margin-left: 7.5em;
+    width: 371px;
+    height: 371px;
+            }
 
   img:hover {background: #EFE7E7;}
 }

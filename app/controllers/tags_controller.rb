@@ -3,6 +3,11 @@ class TagsController < ApplicationController
   def index
     @tags = Tag.all
     @favors = Favor.all
+
+    
+    @favor = Favor.new
+
+
   end
 
   def new

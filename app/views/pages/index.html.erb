@@ -1,5 +1,5 @@
 
-<div class="row">
+<div class="row homepage">
   <div class="col-md-8">
 
 
@@ -7,13 +7,13 @@
       <div class="image-box">
         <div class="image-box-inside">
 
-            <% @images.each do |image| %>
+            <% Homepage.all.each do |image| %>
 
-            <% if image.user.email == "thanh@yahoo.com" %>
+
 
                 <!-- Button trigger modal -->
                   <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{image.id}"} do %>
-                    <%= image_tag image.photo.url(:thumb), id: "image-in-homepage" %>
+                    <%= image_tag image.photo, id: "image-in-homepage" %>
                   <%end%>
 
                 <!-- Modal -->
@@ -25,15 +25,15 @@
                             <h4 class="modal-title" id="myModalLabel"><%= image.title %></h4>
                           </div>
                           <div class="modal-body">
-                              <%= image_tag image.photo.url(:large), id: "image-in-modal" %>
+                              <%= image_tag image.photo, id: "image-in-modal" %>
                               <hr>
                             <p><%= image.content %></p>
                           </div>
-                           
+
                         </div>
                       </div>
                     </div>
-                  <%end%>
+
             <%end%>
         </div>
     </div>

@@ -1,0 +1,9 @@
+
+
+<%= simple_form_for @favor do |f| %>
+  <%= f.association :image  %>
+  <%= f.association :user %><br>
+
+
+  <%= f.submit "Favor", class: "btn btn-success" %>
+<%end%>

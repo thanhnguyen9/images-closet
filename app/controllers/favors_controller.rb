@@ -4,7 +4,7 @@ class FavorsController < ApplicationController
     @favor = image.favors.new
     @favor.user_id = current_user.id
   end
-
+  
   def create
     @favor = Favor.new(params.require(:favor).permit(:image_id, :user_id))
     if @favor.save
