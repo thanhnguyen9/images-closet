@@ -1,8 +1,8 @@
 Images-Closet
 =============
-Explore beautiful things in the world with pictures.
-Images-Closet makes it really easy sharing images with the Internet.
-View demo site: http//:images-closet.herokuapp.com/
+- Explore beautiful things in the world with pictures.
+- Images-Closet makes it really easy sharing images with the Internet.
+- View demo site: http//:images-closet.herokuapp.com/
 
 Usage
 =====
