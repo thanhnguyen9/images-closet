@@ -11,4 +11,8 @@ class PagesController < ApplicationController
   def place
     @places = Place.all
   end
+
+  def island
+    @islands = Island.all
+  end
 end

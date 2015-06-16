@@ -4,58 +4,58 @@
 
 
 
-      <div class="image-box">
-        <div class="image-box-inside">
+    <div class="image-box img-responsive text-center">
+      <div class="image-box-inside">
 
-            <% @homepages.each do |image| %>
+        <% @homepages.each do |image| %>
 
 
 
-                <!-- Button trigger modal -->
-                  <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{image.id}"} do %>
-                    <%= image_tag image.photo, id: "image-in-homepage" %>
-                  <%end%>
+        <!-- Button trigger modal -->
+        <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{image.id}"} do %>
+        <%= image_tag image.photo, id: "image-in-homepage" %>
+        <%end%>
 
-                <!-- Modal -->
-                    <div class="modal fade" id="photo-modal<%=image.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title" id="myModalLabel"><%= image.title %></h4>
-                          </div>
-                          <div class="modal-body">
-                              <%= image_tag image.photo, id: "image-in-modal" %>
-                              <hr>
-                            <p><%= image.content %></p>
-                          </div>
+        <!-- Modal -->
+        <div class="modal fade" id="photo-modal<%=image.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"><%= image.title %></h4>
+              </div>
+              <div class="modal-body">
+                <%= image_tag image.photo, id: "image-in-modal" %>
+                <hr>
+                <p><%= image.content %></p>
+              </div>
 
-                        </div>
-                      </div>
-                    </div>
-
-            <%end%>
+            </div>
+          </div>
         </div>
+
+        <%end%>
+      </div>
     </div>
   </div>
   <div class="col-md-4">
     <div class="image-box">
-      <div class="image-box-inside">
+      <div class="image-box-inside welcome-box">
         <h3>Welcome</h3>
-          <p>
-            These are indeed world’s most famous photos. Every single one of them has a great story behind, we’re trying to bring you the pictures that changed mankind. If the change was good or bad, that is for you to judge. Click it to see more information.
-          </p>
+        <p>
+          These are indeed world’s most famous photos. Every single one of them has a great story behind, we’re trying to bring you the pictures that changed mankind. If the change was good or bad, that is for you to judge. Click it to see more information.
+        </p>
       </div>
     </div>
     <br >
     <div class="image-box">
       <div class="image-box-inside most-ten">
         <%= link_to "20 most beautiful places", pages_places_path %><br>
-        <%= link_to "20 most beautiful islands", "#" %><br>
+        <%= link_to "20 most beautiful islands", pages_islands_path %><br>
         <%= link_to "20 most beautiful caves", pages_caves_path %><br>
         <%= link_to "20 most beautiful moutains", "#" %><br>
       </div>
     </div>
 
 
-</div>
+  </div>

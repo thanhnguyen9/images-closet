@@ -7,12 +7,16 @@
       <div class="image-box img-responsive text-center">
         <div class="image-box-inside">
 
-            <% @places.each do |image| %>
+            <% @islands.each do |image| %>
 
+
+
+                <!-- Button trigger modal -->
                   <%= link_to "#", data: {toggle: "modal", target: "#photo-modal#{image.id}"} do %>
                     <%= image_tag image.photo, id: "image-in-homepage" %>
                   <%end%>
 
+                <!-- Modal -->
                     <div class="modal fade" id="photo-modal<%=image.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">

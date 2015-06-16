@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   end
 
-  get 'pages/caves' => 'pages#cave'
-
-  get 'pages/places' => 'pages#place'
+  get 'pages/caves'   => 'pages#cave'
+  get 'pages/places'  => 'pages#place'
+  get 'pages/islands' => 'pages#island'
 end
