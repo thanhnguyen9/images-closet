@@ -1,6 +1,6 @@
-
-
-
+//
+//
+//
 .navbar-default {height: 2em}
 .navbar-header {
   a {
@@ -14,83 +14,106 @@
     text-decoration: none;
     }
 }
+//
+// //sign-in
+//
+//
+// //sign-in
+// .btn-primary.nav-sign-in {
+//   margin-left: 54em;
+//   margin-top: -3.9em;
+//   background: #1B191B;
+//   border: black
+// }
+// .btn-primary.nav-sign-in:hover {background: #564856;}
+//
+// //sign-up
+// .btn-primary.nav-sign-up{
+//   margin-left: 60em;
+//   margin-top: -6.8em;
+//   border-color: #f8f8f8;
+//   color: white;
+//   background-color: #1B191B;
+// }
+// .btn-primary.nav-sign-up:hover {
+//   background: #564856;
+//   }
+//
+//
+// #form{display: none}
+//
+// //sign-out button
+//
+// .btn-primary.nav-sign-out{
+//   margin-left: 57.5em;
+//   margin-top: -6.8em;
+//   border-color: #f8f8f8;
+//   color: white;
+//   background-color: #1B191B;
+// }
+// .btn-primary.nav-sign-out:hover {
+//   color: white;
+//   background: #564856
+//   }
+//
+// //sign in and image button
+// .btn-primary.nav{
+//   border-color: #f8f8f8;
+//   color: white;
+//   background-color: #f8f8f8;
+//   height: 2em;
+//   }
+// .btn-primary.nav:hover{background-color: black;}
+//
+//
+// .nav-my-image {
+//   margin-left: 12em;
+//   margin-top: -4em;
+//   background: #1B191B;
+//   border: black
+// }
+// .btn-primary.nav-my-image:hover{background: #564856;}
+//
+//
+// .nav-tag {
+//   margin-top: -4em;
+//   margin-left: 0.5em;
+//   background: #1B191B;
+//   border: black
+// }
+// .btn-primary.nav-tag:hover{background: #564856;}
+//
+// .nav-rec {
+//   margin-top: -4em;
+//   margin-left: 24em;
+//   border-color: #f8f8f8;
+//   color: white;
+//   background-color: #1B191B;
+//   }
+//
+// .btn-primary.nav-rec:hover {
+//   background: #564856;
+//   }
 
-//sign-in
-
-
-//sign-in
-.btn-primary.nav-sign-in {
-  margin-left: 54em;
-  margin-top: -3.9em;
-  background: #1B191B;
-  border: black
-}
-.btn-primary.nav-sign-in:hover {background: #564856;}
-
-//sign-up
-.btn-primary.nav-sign-up{
-  margin-left: 60em;
-  margin-top: -6.8em;
-  border-color: #f8f8f8;
+a.btn.btn-primary.log-in {
+  padding: 0.5em;
+  margin: 0.5em;
+  background-color: black;
+  border-color: rgb(237, 245, 118);
   color: white;
-  background-color: #1B191B;
 }
-.btn-primary.nav-sign-up:hover {
-  background: #564856;
-  }
 
-
-#form{display: none}
-
-//sign-out button
-
-.btn-primary.nav-sign-out{
-  margin-left: 57.5em;
-  margin-top: -6.8em;
-  border-color: #f8f8f8;
+a.btn.btn-primary.log-in:hover {
+  background-color: rgb(90, 47, 47);
   color: white;
-  background-color: #1B191B;
 }
-.btn-primary.nav-sign-out:hover {
-  color: white;
-  background: #564856
-  }
 
-//sign in and image button
-.btn-primary.nav{
-  border-color: #f8f8f8;
-  color: white;
-  background-color: #f8f8f8;
-  height: 2em;
-  }
-.btn-primary.nav:hover{background-color: black;}
-
-
-.nav-my-image {
-  margin-left: 12em;
-  margin-top: -4em;
-  background: #1B191B;
-  border: black
+.navbar-default .navbar-brand {
+  color: #030303;
+  /* padding-bottom: 1em; */
+  margin-top: -0.5em;
 }
-.btn-primary.nav-my-image:hover{background: #564856;}
 
-
-.nav-tag {
-  margin-top: -4em;
-  margin-left: 0.5em;
-  background: #1B191B;
-  border: black
+nav.navbar.navbar-default.navbar-static-top {
+  border-radius: 0.6em;
 }
-.btn-primary.nav-tag:hover{background: #564856;}
-
-.nav-rec {
-  margin-top: -4em;
-  margin-left: 24em;
-  border-color: #f8f8f8;
-  color: white;
-  background-color: #1B191B;
-  }
-
-.btn-primary.nav-rec:hover {
-  background: #564856;
-  }
